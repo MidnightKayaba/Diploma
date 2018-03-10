@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { TopMenuComponent } from './top-menu/top-menu.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TopMenuComponent
   ],
   imports: [
     BrowserModule
