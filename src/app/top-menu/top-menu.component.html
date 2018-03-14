@@ -1,40 +1,42 @@
-<div class="top-menu">
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link active" href="#">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">О нас</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Наш опыт</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Каталог</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Наши клиенты</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Контакты</a>
-          </li>
-        </ul>
-      </div>
-      <div class="authorization">
-        <a href="#">Вход</a>
-        /
-        <a href="#">Регистрация</a>
-      </div>
-      <div class="language">
-        <a href="#">Ru</a>
-      </div>
-    </nav>
-  </div>
+<div class="top-menu text">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="#">{{lang.home}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{{lang.aboutUs}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{{lang.ourExperience}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{{lang.catalog}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{{lang.ourClients}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{{lang.contacts}}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="authorization">
+                <a href="#">{{lang.signIn}}</a>
+                /
+                <a href="#">{{lang.signUp}}</a>
+            </div>
+            <select class="language" [(ngModel)]="languageDefault" (ngModelChange)="onChange($event)">
+                <option *ngFor="let lg of languageList" [value]="lg">{{lg}}</option>
+            </select>
+
+        </nav>
+    </div>
 </div>
+<!--<input [ngModel]="languageDefault" (ngModelChange)="onNameChange($event)" />-->
