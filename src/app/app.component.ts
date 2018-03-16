@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
     selector: 'app-root',
@@ -6,6 +6,7 @@ import {Component} from '@angular/core';
     styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
+    @Output () langSwapHome  = new EventEmitter<string>();
     navRu = {
         'home': 'Главная',
         'aboutUs': 'О нас',
@@ -27,7 +28,9 @@ export class AppComponent {
         'signUp' : 'Sign up'
     };
     lang = this.navRu;
+    asd = 'En';
     onChanged(model) {
         this.lang = model === 'En' ? this.navEn : this.navRu;
+        this.langSwapHome.emit(model);
     }
 }
