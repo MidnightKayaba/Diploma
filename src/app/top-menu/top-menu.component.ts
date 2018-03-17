@@ -1,4 +1,6 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, DoCheck} from '@angular/core';
+
+import {LangService} from '../shared/lang.service';
 
 
 @Component({
@@ -6,33 +8,15 @@ import {Component, EventEmitter, Output} from '@angular/core';
     templateUrl: './top-menu.component.html',
     styleUrls: ['./top-menu.component.sass']
 })
-export class TopMenuComponent {
-    @Output () langSwap  = new EventEmitter<string>();
+export class TopMenuComponent implements DoCheck {
+    constructor (private langService: LangService) {}
     languageList: string[] = ['Ru', 'En'];
-    navRu = {
-        'home': 'Главная',
-        'aboutUs': 'О нас',
-        'ourExperience': 'Наш опыт',
-        'catalog': 'Каталог',
-        'ourClients': 'Наши клиенты',
-        'contacts': 'Контакты',
-        'signIn' : 'Вход',
-        'signUp' : 'Регистрация'
-    };
-    navEn = {
-        'home': 'Home',
-        'aboutUs': 'About us',
-        'ourExperience': 'Our experience',
-        'catalog': 'Catalog',
-        'ourClients': 'Our clients',
-        'contacts': 'Contacts',
-        'signIn' : 'Sign in',
-        'signUp' : 'Sign up'
-    };
     languageDefault = 'Ru';
-    lang = this.navRu;
-    onChange(model) {
-        this.lang = model === 'En' ? this.navEn : this.navRu;
-        this.langSwap.emit(model);
+    lang;
+    ngDoCheck() {
+        this.lang = this.langService.getLang();
+    }
+    onChange(lang: string) {
+        this.langService.swapLang(lang);
     }
 }
