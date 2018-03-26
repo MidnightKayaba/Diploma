@@ -8,8 +8,9 @@ export class LangService {
         'contacts': 'Контакты',
         'signIn': 'Вход',
         'signUp': 'Регистрация',
-        'technologyGrope': 'Группа технология',
-        'welcome' : 'Добро пожаловать на наш сайт!'
+        'technologyGrope': 'Группа Технология',
+        'welcome' : 'Добро пожаловать на наш сайт!',
+        'AUdescription' : 'Основным направлением деятельности производственно-инжиниринговой компании "Группа Технология" является разработка и производство технологического промышленного оборудования, разработка и внедрение систем автоматизации технологическиx процессов.'
     };
     langEn = {
         'home': 'Home',
@@ -20,8 +21,9 @@ export class LangService {
         'contacts': 'Contacts',
         'signIn': 'Sign in',
         'signUp': 'Sign up',
-        'technologyGrope': 'Technology Grope',
-        'welcome' : 'Welcome to our site!'
+        'technologyGrope': 'Grope Technology',
+        'welcome' : 'Welcome to our site!',
+        'AUdescription' : 'The main direction of the production and engineering company "Group Technology" is the development and production of technological industrial equipment, development and implementation of automation systems for technological processes.'
     };
     lang = this.langRu;
 

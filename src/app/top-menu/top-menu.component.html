@@ -14,16 +14,16 @@
                         <a class="nav-link" href="#about-us-block">{{lang.aboutUs}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{{lang.ourExperience}}</a>
+                        <a class="nav-link" href="#our-experience-block">{{lang.ourExperience}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{{lang.catalog}}</a>
+                        <a class="nav-link" href="#catalog-block">{{lang.catalog}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{{lang.ourClients}}</a>
+                        <a class="nav-link" href="#our-clients-block">{{lang.ourClients}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{{lang.contacts}}</a>
+                        <a class="nav-link" href="#contacts-block">{{lang.contacts}}</a>
                     </li>
                 </ul>
             </div>
@@ -35,7 +35,6 @@
             <select class="language" [(ngModel)]="languageDefault" (ngModelChange)="onChange($event)">
                 <option *ngFor="let lg of languageList" [value]="lg">{{lg}}</option>
             </select>
-
         </nav>
     </div>
 </div>
